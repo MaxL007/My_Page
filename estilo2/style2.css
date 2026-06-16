@@ -1,0 +1,33 @@
+.board {
+  display: grid;
+  grid-template-columns: 40px repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+canvas {
+  border: 2px solid black;
+  background: white;
+  cursor: crosshair;
+}
+
+.top, .side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  cursor: pointer;
+}

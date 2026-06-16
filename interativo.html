@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pintura Interativa</title>
+<link rel="stylesheet" href="estilo2/style2.css">
+</head>
+<body>
+
+<h2>📘 Posição e Localização</h2>
+
+<p id="question"></p>
+
+<div class="palette">
+  <div class="color" data-color="blue" style="background:blue"></div>
+  <div class="color" data-color="red" style="background:red"></div>
+  <div class="color" data-color="green" style="background:green"></div>
+  <div class="color" data-color="yellow" style="background:yellow"></div>
+</div>
+
+<div class="board">
+
+  <div></div>
+  <div class="top">A</div>
+  <div class="top">B</div>
+  <div class="top">C</div>
+
+  <div class="side">1</div>
+  <canvas class="cell" data-pos="A1"></canvas>
+  <canvas class="cell" data-pos="B1"></canvas>
+  <canvas class="cell" data-pos="C1"></canvas>
+
+  <div class="side">2</div>
+  <canvas class="cell" data-pos="A2"></canvas>
+  <canvas class="cell" data-pos="B2"></canvas>
+  <canvas class="cell" data-pos="C2"></canvas>
+
+  <div class="side">3</div>
+  <canvas class="cell" data-pos="A3"></canvas>
+  <canvas class="cell" data-pos="B3"></canvas>
+  <canvas class="cell" data-pos="C3"></canvas>
+
+  <div class="side">4</div>
+  <canvas class="cell" data-pos="A4"></canvas>
+  <canvas class="cell" data-pos="B4"></canvas>
+  <canvas class="cell" data-pos="C4"></canvas>
+
+</div>
+
+<p id="result"></p>
+
+<script src="scripts2/scripts2.js"></script>
+</body>
+</html>
