@@ -1,32 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minhas Página</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
+
 <body>
-    <header><h1>Essa página será destinada ao conteúdo sobre o aluno</h1></header>
-        <h2>Olá meu nome é:</h2>
-        <h3 id="nome">...</h3>
+    <header>
+        <h1>Essa página será destinada ao conteúdo sobre o aluno</h1>
+    </header>
+    <h2>Olá meu nome é:</h2>
+    <h3 id="nome">...</h3>
     <nav>
         <ul>
-            <li><a href="https://www.suellensantos.fot.br/post/lugares-incriveis-para-conhecer-em-guajara-mirim-ro">Guajará-Mirín</a></li>
+            <li><a
+                    href="https://www.suellensantos.fot.br/post/lugares-incriveis-para-conhecer-em-guajara-mirim-ro">Guajará-Mirín</a>
+            </li>
             <li><a href="">Esportes</a></li>
-            <li><a href="https://onedrive.live.com/:x:/g/personal/1611403250e7fd4a/IQDiuLPHBQU2S4uzMbBGGVTWAfmRN-uo3p2CaVI6NPyQmWY?rtime=c92xCLTC3kg&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy8xNjExNDAzMjUwZTdmZDRhL0lRRGl1TFBIQlFVMlM0dXpNYkJHR1ZUV0FmbVJOLXVvM3AyQ2FWSTZOUHlRbVdZP2U9QXhxQXVU">Investimentos</a></li>
+            <li><a
+                    href="https://onedrive.live.com/:x:/g/personal/1611403250e7fd4a/IQDiuLPHBQU2S4uzMbBGGVTWAfmRN-uo3p2CaVI6NPyQmWY?rtime=c92xCLTC3kg&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy8xNjExNDAzMjUwZTdmZDRhL0lRRGl1TFBIQlFVMlM0dXpNYkJHR1ZUV0FmbVJOLXVvM3AyQ2FWSTZOUHlRbVdZP2U9QXhxQXVU">Investimentos</a>
+            </li>
             <li><a href="interativo.html">Teste Educativo</a></li>
         </ul>
     </nav>
     <main>
         <article>
-            <p> Meu nome completo é MÁXIMUS DA SILVA MONTEIRO</p>
             <p>Bom Dia, Boa Tarde ou Boa Noite</p>
-            <p></p>
-            <p>Por fim gosto de estar informados sobre os investimentos dos quais escolhi e pretende escolher para a minha carteira de investimento </p>
+            <p> Meu nome completo é MÁXIMUS DA SILVA MONTEIRO</p>
+            <p>Tenho 22 anos, sou casado, trabalho como Auxiliar de Compras numa loja de máquinas agrícolas, gosto muito de mexer com números, e isso que às vezes me anima de trabalhar,kklkk,</p>
+            <p>Por fim gosto de estar informados sobre os investimentos dos quais escolhi e pretende escolher para a
+                minha carteira de investimento </p>
         </article>
+        <section class="formulario">
+            <h2>📩 Contato</h2>
+
+            <form id="formContato">
+
+                <label>Nome:</label><br>
+                <input type="text" id="nomeInput" required><br><br>
+
+                <label>Mensagem:</label><br>
+                <textarea id="mensagem" required></textarea><br><br>
+                <div class="grupo" text-align="left">
+                    <label>Tipo de Contato:</label><br>
+                    <label>
+                        <input type="radio" name="tipo" value="elogio" required style="transform: scale(1.7);"> Elogio
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo" value="critica" style="transform: scale(1.7);"> Crítica
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo" value="sugestao" style="transform: scale(1.7);"> Sugestão
+                    </label>
+                    <br><br>
+                </div>
+
+                <label>Interesses:</label><br>
+                <input type="checkbox" name="interesse" value="investimentos" style="transform: scale(1.7);">
+                Investimentos
+                <input type="checkbox" name="interesse" value="esportes" style="transform: scale(1.7);"> Esportes
+                <input type="checkbox" name="interesse" value="tecnologia" style="transform: scale(1.7);"> Tecnologia
+                <br><br>
+
+                <label>Escolha uma frase</label><br>
+                <select id="origem" required>
+                    <option value="">Selecione</option>
+                    <option value="frase1">"Se você não gosta do seu destino, não o aceite. Em vez disso, tenha a coragem para transformá-lo naquilo que você quer que ele seja." - Naruto Uzumaki</option>
+                    <option value="amigos">"Mesmo que nós esqueçamos os rostos dos nossos amigos, jamais esqueceremos os laços que foram cravados nas nossas almas." - Otonashi Yuzuru, Angel Beats</option>
+                    <option value="redes">"Pode ser difícil agora, mas você deve silenciar esses pensamentos. Pare de contar as coisas que você perdeu, o que se foi se foi. Então pergunte a si mesmo o que ainda resta para você." - One Piece</option>
+                </select>
+                <br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="msgFinal"></p>
+        </section>
     </main>
     <script src="scripts/script.js"></script>
-    
+
 </body>
+
 </html>
