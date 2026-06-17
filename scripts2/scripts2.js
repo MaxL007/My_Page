@@ -1,6 +1,5 @@
 let selectedColor = null;
 
-// desafios iguais exercício
 const challenges = [
   { pos: "A2", color: "blue" },
   { pos: "B1", color: "red" },
@@ -8,8 +7,6 @@ const challenges = [
 ];
 
 let current = 0;
-
-// mostrar pergunta
 function showQuestion() {
   const q = challenges[current];
   document.getElementById("question").innerText =
@@ -18,12 +15,10 @@ function showQuestion() {
 
 showQuestion();
 
-// selecionar cor
 document.querySelectorAll(".color").forEach(c => {
   c.onclick = () => selectedColor = c.dataset.color;
 });
 
-// configurar pintura
 document.querySelectorAll("canvas").forEach(canvas => {
 
   canvas.width = 100;
@@ -36,19 +31,16 @@ document.querySelectorAll("canvas").forEach(canvas => {
     const pos = canvas.dataset.pos;
     const q = challenges[current];
 
-    // ❌ BLOQUEIO TOTAL (igual atividade)
     if (pos !== q.pos || selectedColor !== q.color) {
       document.getElementById("result").innerText = "❌ Lugar ou cor errada!";
       return;
     }
 
-    // ✅ PINTAR (correta)
     ctx.fillStyle = selectedColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     document.getElementById("result").innerText = "✅ Correto!";
 
-    // próxima
     current++;
     if (current < challenges.length) {
       setTimeout(showQuestion, 1000);
