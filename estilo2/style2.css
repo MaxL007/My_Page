@@ -1,33 +1,93 @@
-.board {
-  display: grid;
-  grid-template-columns: 40px repeat(3, 100px);
-  gap: 5px;
-  justify-content: center;
-  margin-top: 20px;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
 }
 
-canvas {
-  border: 2px solid black;
-  background: white;
-  cursor: crosshair;
-}
-
-.top, .side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+h2 {
+    margin-top: 20px;
 }
 
 .palette {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
 }
 
 .color {
-  width: 40px;
-  height: 40px;
-  border: 2px solid black;
-  cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid white;
+}
+
+.color:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px white;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 40px repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.top, .side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid white;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+.cell.correct {
+    box-shadow: 0 0 15px lime;
+}
+
+.cell.error {
+    box-shadow: 0 0 10px red;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .board {
+        grid-template-columns: 30px repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+    }
+}
+button {
+    background: #00c3ff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
